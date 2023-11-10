@@ -1,0 +1,75 @@
+@import url("styles/header.css");
+@import url("styles/banner.css");
+@import url("styles/carrossel.css");
+@import url("styles/topicos.css");
+@import url("styles/contato.css");
+@import url("styles/rodape.css");
+
+:root{
+    --cor-de--fundo: #ca2d2d;
+    --cor-do-menu:#108292;
+    --titulo:#80beaf;
+    --cor-do-menu-fundo:#0000;
+    --link-1:#ffffff;
+    --link-2:#ffffff;
+    --link-3:#ffffff;
+    --fonte-principal:"Fasthand";
+    --fonte-secundaria:"Montserrat";  
+}
+/* Neste lugar é onde podemos atribuir variareis ou seja para cada vez que for usar algo
+aqui pode ser declarado o que indica que não precisa criar varios CSS apenas um que 
+contenha tudo que esta no projeto e claro fonte é usado aqui para poupar tampo (:root)
+é a forma que o CSS aceita as variaveis que estara no projeto. Lembrando que o nome 
+da fonte deve estar no projeto por que se não ela não aplica no caso desta fonte
+se chama ("Fasthand") e sim deve ter as aspas em volta.*/
+body{
+ background-color: var(--cor-de--fundo);
+ font-family: 'Playfair Display', serif;
+ font-size: 16px;
+ font-weight: 400;
+}
+.lista-rodape {
+    
+}
+.imagens-abaixo {
+    display: flex;
+    justify-content: center; /* Centralizar horizontalmente */
+    align-items: center; /* Centralizar verticalmente */
+    flex-direction: column; /* Empilhar os elementos verticalmente */
+}
+
+.imagem {
+    text-align: center; /* Centralizar o texto dentro das imagens */
+    margin-bottom: 20px; /* Adicione espaço entre as imagens, se necessário */
+}
+.botao-imagem {
+    display: inline-block;
+    background-color: #787878;
+    color: #fff;
+    padding: 10px 20px; /* Adapte o preenchimento ao tamanho desejado */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin: 10px;
+}
+
+.botao-imagem:hover {
+    background-color: #094F59;
+}
+
+/* Aqui é corpo do projeto note que tudo gira em torno disto quer dizer que quando 
+aplicado o comando(font-family) todo o corpo do projeto vai usar isso logo cada parte
+do projeto tera a mesma fonte claro isso pode ser dividido caso queria uma fonte para
+cada texto mas deve ser declaro no HTML e alocado no (:root), ja no tamanho
+(font-size) isso indica o tamanho não é regra mas sempre é usado (16px) como uso
+ja (font-weight: 400) é o estilo da fonte geralmente é um padrão tambem 
+ .*/
+
+#more {display: none;}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Reduza o tamanho da fonte para dispositivos móveis, se necessário. */
+        /* Adicione mais estilos de layout responsivo aqui. */
+    }
+}
